@@ -158,7 +158,7 @@ EOF
 #                       Android Buildkite Image
 # ===----------------------------------------------------------------------===##
 
-FROM ubuntu:jammy@sha256:0e5e4a57c2499249aafc3b40fcd541e9a456aab7296681a3994d631587203f97 AS android-builder-base
+FROM ubuntu:jammy@sha256:d80997daaa3811b175119350d84305e1ec9129e1799bba0bd1e3120da3ff52c3 AS android-builder-base
 
 ARG ANDROID_CLANG_VERSION
 ARG ANDROID_CLANG_PREBUILTS_COMMIT
