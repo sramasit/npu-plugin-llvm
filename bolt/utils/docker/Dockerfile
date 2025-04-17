@@ -1,4 +1,4 @@
-FROM ubuntu:20.04@sha256:8e5c4f0285ecbb4ead070431d29b576a530d3166df73ec44affc1cd27555141b AS builder
+FROM ubuntu:24.04@sha256:1e622c5f073b4f6bfad6632f2616c7f59ef256e96fe78bf6a595d1dc4376ac02 AS builder
 
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=UTC
@@ -26,6 +26,6 @@ RUN mkdir build && \
     ninja install-llvm-bolt install-perf2bolt install-merge-fdata \
       install-llvm-boltdiff install-bolt_rt
 
-FROM ubuntu:20.04@sha256:8e5c4f0285ecbb4ead070431d29b576a530d3166df73ec44affc1cd27555141b
+FROM ubuntu:24.04@sha256:1e622c5f073b4f6bfad6632f2616c7f59ef256e96fe78bf6a595d1dc4376ac02
 
 COPY --from=builder /home/bolt/install /usr/local
